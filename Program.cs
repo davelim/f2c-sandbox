@@ -23,8 +23,12 @@ public class Program
 
 
         // DBF writer
-        using var writer = new DBFWriter("./test/dbase_8b.dbf") {
-            DataMemoLoc = "./test/dbase_8b.dbf"
-        };
+        string test_dbf = "./test/dbase_8b.dbf";
+        using var reader = new DBFReader(test_dbf);
+        System.Console.WriteLine(reader.ToString());
+
+        //using var writer = new DBFWriter(test_dbf) {
+        //    DataMemoLoc = "./test/dbase_8b.dbt"
+        //};
     }
 }
