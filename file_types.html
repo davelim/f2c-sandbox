@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Test</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- https://internal.qbcinc.com/securesend/Files -->
+        <!--
+            ekonnect/sponsor/SecureSendAdminMVC/Content/sites/images/
+            -> document
+            ekonnect/sponsor/SecureSendAdminMVC/Content/sites/images/types/
+            -> doc, pdf, rtf, xls, zip
+        -->
+        <!-- https://fontawesome.com/search?q=file&o=r&m=free -->
+        <i class="fa-regular fa-file"></i><br>
+        <i class="fa-solid fa-file-word"></i><br>
+        <i class="fa-solid fa-file-pdf"></i><br>
+        <i class="fa-solid fa-file-text"></i><br>
+        <i class="fa-solid fa-file-excel"></i><br>
+        <i class="fa-solid fa-file-zipper"></i>
+        <hr>
+        <i id="myIcon" class="fa-regular fa-file" />
+        <script type="text/javascript">
+            function imageIconWithFile(filename) {
+                //const ext = filename.split('.').pop();
+                const ext = "pdf";
+                let iconClass;
+                switch (ext){
+                    case "doc":
+                        iconClasss = "fa-solid fa-file-word";
+                        break;
+                    case "pdf":
+                        iconClasss = "fa-solid fa-file-pdf";
+                        break;
+                    case "rtf":
+                        iconClasss = "fa-solid fa-file-text";
+                        break;
+                    case "xls":
+                        iconClasss = "fa-solid fa-file-excel";
+                        break;
+                    case "zip":
+                        iconClasss = "fa-solid fa-file-zipper";
+                        break;
+                    default:
+                        iconClasss = "fa-regular fa-file";
+                }
+                console.log(`AAA... ${iconClass}`);
+                let iconElement = document.getElementById("myIcon");
+                iconElement.class = iconClass;
+            }
+            imageIconWithFile("foo.pdf");
+        </script>
+    </body>
+</html>
